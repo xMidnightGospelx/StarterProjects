@@ -317,7 +317,7 @@
             displayLabel.Font = new Font("Old English Text MT", 27.8490562F, FontStyle.Regular, GraphicsUnit.Point, 0);
             displayLabel.ForeColor = Color.FromArgb(0, 192, 0);
             displayLabel.Location = new Point(14, 9);
-            displayLabel.MaximumSize = new Size(648, 170);
+            displayLabel.MinimumSize = new Size(648, 170);
             displayLabel.Name = "displayLabel";
             displayLabel.Size = new Size(648, 170);
             displayLabel.TabIndex = 20;
@@ -355,6 +355,7 @@
             Name = "Calculator";
             Text = "Calculator";
             Load += Calculator_Load;
+            Resize += Calculator_Resize;
             ResumeLayout(false);
         }
 

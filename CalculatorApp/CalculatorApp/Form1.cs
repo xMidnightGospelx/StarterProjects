@@ -55,11 +55,35 @@ namespace CalculatorApp
             plusButtonOriginalRectangle = new Rectangle(plusButton.Location.X, plusButton.Location.Y, plusButton.Width, plusButton.Height);
             displayLabelOriginalRectangle = new Rectangle(displayLabel.Location.X, displayLabel.Location.Y, displayLabel.Width, displayLabel.Height);
         }
+        private void Calculator_Resize(object sender, EventArgs e)
+        {
+            resizeControl(oneButtonOriginalRectangle, oneButton);
+            resizeControl(twoButtonOriginalRectangle, twoButton);
+            resizeControl(threeButtonOriginalRectangle, threeButton);
+            resizeControl(fourButtonOriginalRectangle, fourButton);
+            resizeControl(fiveButtonOriginalRectangle, fiveButton);
+            resizeControl(sixButtonOriginalRectangle, sixButton);
+            resizeControl(sevenButtonOriginalRectangle, sevenButton);
+            resizeControl(eightButtonOriginalRectangle, eightButton);
+            resizeControl(nineButtonOriginalRectangle, nineButton);
+            resizeControl(zeroButtonOriginalRectangle, zeroButton);
+            resizeControl(backSpaceButtonOriginalRectangle, backSpaceButton);
+            resizeControl(plusMinusButtonOriginalRectangle, plusMinusButton);
+            resizeControl(clearButtonOriginalRectangle, clearButton);
+            resizeControl(decimalButtonOriginalRectangle, decimalButton);
+            resizeControl(squareRootButtonOriginalRectangle, squareRootButton);
+            resizeControl(multiplyButtonOriginalRectangle, multiplyButton);
+            resizeControl(divideButtonOriginalRectangle, divideButton);
+            resizeControl(minusButtonOriginalRectangle, minusButton);
+            resizeControl(equalButtonOriginalRectangle, equalButton);
+            resizeControl(plusButtonOriginalRectangle, plusButton);
+            resizeControl(displayLabelOriginalRectangle, displayLabel);
+        }
 
         private void resizeControl(Rectangle OriginalControlRect, Control control)
         {
             float xAxis = (float)(this.Width) / (float)(originalFormSize.Width);
-            float yAxis = (float)(this.Height)  / (float)(originalFormSize.Height);
+            float yAxis = (float)(this.Height) / (float)(originalFormSize.Height);
 
             int newXPosition = (int)(OriginalControlRect.X * xAxis);
             int newYPosition = (int)(OriginalControlRect.Y * yAxis);
@@ -67,7 +91,7 @@ namespace CalculatorApp
             int newWidth = (int)(OriginalControlRect.Width * xAxis);
             int newHight = (int)(OriginalControlRect.Height * yAxis);
 
-            control.Location = new Point (newXPosition, newYPosition);
+            control.Location = new Point(newXPosition, newYPosition);
             control.Size = new Size(newWidth, newHight);
         }
 
@@ -170,5 +194,6 @@ namespace CalculatorApp
         {
 
         }
+
     }
 }
