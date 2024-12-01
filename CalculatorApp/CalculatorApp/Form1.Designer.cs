@@ -355,6 +355,8 @@
             Name = "Calculator";
             Text = "Calculator";
             Load += Calculator_Load;
+            KeyDown += Calculator_KeyDown;
+            KeyUp += Calculator_KeyUp;
             Resize += Calculator_Resize;
             ResumeLayout(false);
         }
