@@ -210,7 +210,7 @@
             // divideButton
             // 
             divideButton.Font = new Font("Old English Text MT", 19.6981125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            divideButton.Location = new Point(502, 307);
+            divideButton.Location = new Point(504, 307);
             divideButton.MinimumSize = new Size(158, 114);
             divideButton.Name = "divideButton";
             divideButton.Padding = new Padding(1);
@@ -262,7 +262,7 @@
             // multiplyButton
             // 
             multiplyButton.Font = new Font("Old English Text MT", 19.6981125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            multiplyButton.Location = new Point(502, 187);
+            multiplyButton.Location = new Point(504, 187);
             multiplyButton.MinimumSize = new Size(158, 114);
             multiplyButton.Name = "multiplyButton";
             multiplyButton.Padding = new Padding(1);

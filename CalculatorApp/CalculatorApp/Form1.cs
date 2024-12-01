@@ -95,59 +95,108 @@ namespace CalculatorApp
             control.Size = new Size(newWidth, newHight);
         }
 
+        float num1, num2, result;
+        char operation;
+        bool dec = false;
+
+        private void changeLabel(int numPressed)
+        {
+            if (dec == true)
+            {
+                int decimalCount = 0;
+                foreach (char c in displayLabel.Text)
+                {
+                    if (c == '.')
+                    {
+                        decimalCount++;
+                    }
+                }
+                if (decimalCount < 1)
+                {
+                    displayLabel.Text = displayLabel.Text + ".";
+                }
+                dec = false;
+            }
+            else
+            {
+                if(displayLabel.Text.Equals("0") == true && displayLabel.Text != null)
+                {
+                    displayLabel.Text = numPressed.ToString();
+                }
+                else if(displayLabel.Text.Equals("-0") == true)
+                {
+                    displayLabel.Text = "-" + numPressed.ToString();
+                }
+                else
+                {
+                    displayLabel.Text = displayLabel.Text + numPressed.ToString();
+                }
+            }
+        }
+
         private void zeroButton_Click(object sender, EventArgs e)
         {
-
+            changeLabel(0);
         }
 
         private void oneButton_Click(object sender, EventArgs e)
         {
+            changeLabel(1);
 
         }
 
         private void twoButton_Click(object sender, EventArgs e)
         {
+            changeLabel(2);
 
         }
 
         private void threeButton_Click(object sender, EventArgs e)
         {
+            changeLabel(3);
 
         }
 
         private void fourButton_Click(object sender, EventArgs e)
         {
+            changeLabel(4);
 
         }
 
         private void fiveButton_Click(object sender, EventArgs e)
         {
+            changeLabel(5);
 
         }
 
         private void sixButton_Click(object sender, EventArgs e)
         {
+            changeLabel(6);
 
         }
 
         private void sevenButton_Click(object sender, EventArgs e)
         {
+            changeLabel(7);
 
         }
 
         private void eightButton_Click(object sender, EventArgs e)
         {
+            changeLabel(8);
 
         }
 
         private void nineButton_Click(object sender, EventArgs e)
         {
+            changeLabel(9);
 
         }
 
         private void decimalButton_Click(object sender, EventArgs e)
         {
-
+            dec = true;
+            changeLabel(0);
         }
 
         private void PlusMinusButton_Click(object sender, EventArgs e)
