@@ -56,6 +56,21 @@ namespace CalculatorApp
             displayLabelOriginalRectangle = new Rectangle(displayLabel.Location.X, displayLabel.Location.Y, displayLabel.Width, displayLabel.Height);
         }
 
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {
+            float xAxis = (float)(this.Width) / (float)(originalFormSize.Width);
+            float yAxis = (float)(this.Height)  / (float)(originalFormSize.Height);
+
+            int newXPosition = (int)(OriginalControlRect.X * xAxis);
+            int newYPosition = (int)(OriginalControlRect.Y * yAxis);
+
+            int newWidth = (int)(OriginalControlRect.Width * xAxis);
+            int newHight = (int)(OriginalControlRect.Height * yAxis);
+
+            control.Location = new Point (newXPosition, newYPosition);
+            control.Size = new Size(newWidth, newHight);
+        }
+
         private void zeroButton_Click(object sender, EventArgs e)
         {
 
