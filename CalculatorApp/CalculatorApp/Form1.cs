@@ -1,10 +1,15 @@
 namespace CalculatorApp
 {
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
-        public Form1()
+        public Calculator()
         {
             InitializeComponent();
+        }
+
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
